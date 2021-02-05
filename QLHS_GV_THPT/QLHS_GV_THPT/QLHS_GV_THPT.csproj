@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="GUI\frmDiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +103,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Database\Diagram.drawio" />
+    <None Include="Database\Diagram.svg" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -116,9 +119,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAO\" />
-    <Folder Include="Database\" />
     <Folder Include="DTO\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\Data.sql" />
+    <Content Include="Database\Database.sql" />
+    <Content Include="Database\StoreProcedure.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
