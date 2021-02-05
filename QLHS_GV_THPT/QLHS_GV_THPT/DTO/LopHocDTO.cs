@@ -2,7 +2,7 @@
 using System.Data;
 
 
-namespace QuanLyHocSinhTHPT.DTO
+namespace QLHS_GV_THPT.DTO
 {
     class LopHocDTO
     {
