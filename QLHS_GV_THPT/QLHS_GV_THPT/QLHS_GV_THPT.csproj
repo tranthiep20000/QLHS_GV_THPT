@@ -47,6 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DTO\BangDiemDTO.cs" />
+    <Compile Include="DTO\GiaoVienDTO.cs" />
+    <Compile Include="DTO\HocSinhDTO.cs" />
+    <Compile Include="DTO\LopHocDTO.cs" />
+    <Compile Include="DTO\MonHocDTO.cs" />
     <Compile Include="GUI\frmDiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,9 +123,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DTO\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Database\Data.sql" />
     <Content Include="Database\Database.sql" />
