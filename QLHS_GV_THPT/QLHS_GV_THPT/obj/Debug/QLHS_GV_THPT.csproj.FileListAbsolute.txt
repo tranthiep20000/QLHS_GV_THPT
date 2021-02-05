@@ -1,0 +1,10 @@
+C:\Users\computer\Desktop\QLHS_GV_THPT\QLHS_GV_THPT\obj\Debug\QLHS_GV_THPT.csprojAssemblyReference.cache
+C:\Users\computer\Desktop\QLHS_GV_THPT\QLHS_GV_THPT\obj\Debug\QLHS_GV_THPT.GUI.frmMain.resources
+C:\Users\computer\Desktop\QLHS_GV_THPT\QLHS_GV_THPT\obj\Debug\QLHS_GV_THPT.Properties.Resources.resources
+C:\Users\computer\Desktop\QLHS_GV_THPT\QLHS_GV_THPT\obj\Debug\QLHS_GV_THPT.csproj.GenerateResource.cache
+C:\Users\computer\Desktop\QLHS_GV_THPT\QLHS_GV_THPT\obj\Debug\QLHS_GV_THPT.csproj.CoreCompileInputs.cache
+C:\Users\computer\Desktop\QLHS_GV_THPT\QLHS_GV_THPT\bin\Debug\QLHS_GV_THPT.exe.config
+C:\Users\computer\Desktop\QLHS_GV_THPT\QLHS_GV_THPT\bin\Debug\QLHS_GV_THPT.exe
+C:\Users\computer\Desktop\QLHS_GV_THPT\QLHS_GV_THPT\bin\Debug\QLHS_GV_THPT.pdb
+C:\Users\computer\Desktop\QLHS_GV_THPT\QLHS_GV_THPT\obj\Debug\QLHS_GV_THPT.exe
+C:\Users\computer\Desktop\QLHS_GV_THPT\QLHS_GV_THPT\obj\Debug\QLHS_GV_THPT.pdb
