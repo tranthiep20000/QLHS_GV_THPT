@@ -35,6 +35,20 @@ namespace QLHS_GV_THPT.GUI
             dgvMonHoc.DataSource = monHocList;
             LoadListMonHoc();
             EditDataGridViewHeader();
+            LoadComboboxGiaoVien();
+            LoadComboboxKiHoc();
+        }
+
+        private void LoadComboboxKiHoc()
+        {
+            cbbKiHoc.Items.Add("1");
+            cbbKiHoc.Items.Add("2");
+        }
+
+        private void LoadComboboxGiaoVien()
+        {
+            cbbGV.DataSource = MonHocDAO.Instance.GetAll();//GiaoVienDAO
+            cbbGV.DisplayMember = "IdGiaoVien";
         }
 
         private void EditDataGridViewHeader()
@@ -54,12 +68,68 @@ namespace QLHS_GV_THPT.GUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            string tenMonHoc = txtTenMH.Text;
+            int soTietHoc = -1;
+            Int32.TryParse(txtSoTiet.Text, out soTietHoc);
+            int idGiaoVien = -1;
+            Int32.TryParse(cbbGV.Text, out idGiaoVien);
+            string namHoc = txtNamHoc.Text;
+            int kiHoc = -1;
+            Int32.TryParse(cbbKiHoc.Text, out kiHoc);
 
+            try
+            {
+                if (tenMonHoc == "" || namHoc == "" || soTietHoc == -1 || kiHoc == -1 || idGiaoVien == -1)
+                {
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+                    return;
+                }
+                MonHocDAO.Instance.Insert(tenMonHoc, soTietHoc, namHoc, kiHoc, idGiaoVien);
+                MessageBox.Show("Thêm thành công");
+                LoadListMonHoc();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Có lỗi xảy ra" + err.ToString());
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
 
+            int row = dgvMonHoc.CurrentCell.RowIndex;
+            int idMonHoc;
+            Int32.TryParse(dgvMonHoc.Rows[row].Cells[0].Value.ToString().Trim(), out idMonHoc);
+
+            string tenMonHoc = txtTenMH.Text;
+            int soTietHoc = -1;
+            Int32.TryParse(txtSoTiet.Text, out soTietHoc);
+            int idGiaoVien = -1;
+            Int32.TryParse(cbbGV.Text, out idGiaoVien);
+            string namHoc = txtNamHoc.Text;
+            int kiHoc = -1;
+            Int32.TryParse(cbbKiHoc.Text, out kiHoc);
+
+            try
+            {
+                if (idMonHoc == -1 || tenMonHoc == "" || namHoc == "" || soTietHoc == -1 || kiHoc == -1 || idGiaoVien == null)
+                {
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+                    return;
+                }
+                if (MessageBox.Show("Bạn có thật sự muốn sửa môn học này!", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                {
+                    MonHocDAO.Instance.Update(idMonHoc, tenMonHoc, soTietHoc, namHoc, kiHoc, idGiaoVien);
+                    MessageBox.Show("Cập nhật thành công");
+                    LoadListMonHoc();
+                }
+                    
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Có lỗi xảy ra" + err.ToString());
+                LoadListMonHoc();
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -72,7 +142,7 @@ namespace QLHS_GV_THPT.GUI
                 if (MessageBox.Show("Bạn có thật sự muốn xoá môn học này!", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
                     MonHocDAO.Instance.Delete(idMonHoc);
-                    MessageBox.Show("Xóa thành công");
+                    MessageBox.Show("Xóa thành công!");
                     LoadListMonHoc();
                 }
 
@@ -82,8 +152,6 @@ namespace QLHS_GV_THPT.GUI
                 MessageBox.Show("Có lỗi xảy ra" + err.ToString());
                 LoadListMonHoc();
             }
-
-
 
         }
 
