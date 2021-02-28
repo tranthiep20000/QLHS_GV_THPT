@@ -69,21 +69,33 @@ namespace QLHS_GV_THPT.GUI
             MakeNull();
         }
 
-        private void btnTimKiem_Click(object sender, EventArgs e)
+       
+        private void btnThem_Click(object sender, EventArgs e)
         {
-            string str = txtTimKiem.Text.Trim();
-            if (str == "")
+            string tenLopHoc = txtTenLopHoc.Text;
+            string tenKhoi = txtTenKhoi.Text;
+            string namHoc = txtNamHoc.Text;
+            int idGiaoVienChuNhiem;
+            Int32.TryParse(cboIdGiaoVien.Text, out idGiaoVienChuNhiem);
+
+            try
             {
-                MessageBox.Show("Chưa nhập thông tin tìm kiếm");
-                return;
+                if (tenLopHoc == "" || tenKhoi == "" || namHoc == "" )
+                {
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+                    return;
+                }
+                LopHocDAO.Instance.Insert(tenLopHoc, tenKhoi, idGiaoVienChuNhiem, namHoc);
+                MessageBox.Show("Thêm thành công");
+                LoadListLopHoc();
             }
-            lopHocList.DataSource = LopHocDAO.Instance.Search(str);
+            catch (Exception err)
+            {
+                MessageBox.Show("Có lỗi xảy ra" + err.ToString());
+                LoadListLopHoc();
+            }
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            LoadListLopHoc();
-        }
 
     }
 }
