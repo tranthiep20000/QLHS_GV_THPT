@@ -7,17 +7,64 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLHS_GV_THPT.DAO;
 
 namespace QLHS_GV_THPT.GUI
 {
     public partial class frmGiaoVien : Form
     {
+        BindingSource giaoVienList = new BindingSource();
         public frmGiaoVien()
         {
             InitializeComponent();
+            LoadFirstTime();
+        }
+        private void LoadFirstTime()
+        {
+            dgvGiaoVien.DataSource = giaoVienList;
+            LoadListGiaoVien();
+            EditDataGridView();
+            BindingDataToFrom();
+        }
+        private void LoadListGiaoVien()
+        {
+            giaoVienList.DataSource = GiaoVienDAO.Instance.GetAll();
+        }
+        private void EditDataGridView()
+        {
+            dgvGiaoVien.Columns["IdGiaoVien"].HeaderText = "ID Giáo viên";
+            dgvGiaoVien.Columns["TenGiaoVien"].HeaderText = "Tên giáo viên";
+            dgvGiaoVien.Columns["GioiTinh"].HeaderText = "Giới tính";
+            dgvGiaoVien.Columns["NgaySinh"].HeaderText = "Ngày sinh";
+            dgvGiaoVien.Columns["SoDienThoai"].HeaderText = "Số điện thoại";
+        }
+        private void BindingDataToFrom()
+        {
+            txtIdGiaoVien.DataBindings.Add(new Binding("Text", dgvGiaoVien.DataSource, "IdGiaoVien", true, DataSourceUpdateMode.Never));
+            txtSoDienThoai.DataBindings.Add(new Binding("Text", dgvGiaoVien.DataSource, "SoDienThoai", true, DataSourceUpdateMode.Never));
+            txtTenGiaoVien.DataBindings.Add(new Binding("Text", dgvGiaoVien.DataSource, "TenGiaoVien", true, DataSourceUpdateMode.Never));
+            dtpNgaySinh.DataBindings.Add(new Binding("Text", dgvGiaoVien.DataSource, "NgaySinh", true, DataSourceUpdateMode.Never));
+            var fmaleBinding = new Binding("Checked", dgvGiaoVien.DataSource, "GioiTinh", true, DataSourceUpdateMode.Never);
+            fmaleBinding.Format += (s, args) => args.Value = ((string)args.Value) == "Nữ";
+            fmaleBinding.Parse += (s, args) => args.Value = (bool)args.Value ? "Nữ" : "Nam";
+            rdbNu.DataBindings.Add(fmaleBinding);
+            rdbNu.CheckedChanged += (s, args) => rdbNam.Checked = !rdbNu.Checked;
+        }
+        private void MakeNull()
+        {
+            txtIdGiaoVien.Text = "";
+            txtSoDienThoai.Text = "";
+            txtTenGiaoVien.Text = "";
+            dtpNgaySinh.Value = DateTime.Now;
+            txtTimKiem.Text = "";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void frmGiaoVien_Load(object sender, EventArgs e)
         {
 
         }
