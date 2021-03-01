@@ -95,7 +95,65 @@ namespace QLHS_GV_THPT.GUI
                 LoadListLopHoc();
             }
         }
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string str = txtTimKiem.Text.Trim();
+            if (str == "")
+            {
+                MessageBox.Show("Chưa nhập thông tin tìm kiếm");
+                return;
+            }
+            lopHocList.DataSource = LopHocDAO.Instance.Search(str);
+        }
 
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadListLopHoc();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            int idLopHoc;
+            Int32.TryParse(txtIdLopHoc.Text.Trim(), out idLopHoc);
+            try
+            {
+                LopHocDAO.Instance.Delete(idLopHoc);
+                MessageBox.Show("Xóa thành công");
+                LoadListLopHoc();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Có lỗi xảy ra" + err.ToString());
+                LoadListLopHoc();
+            }
+        }
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            int idLopHoc = -1;
+            Int32.TryParse(txtIdLopHoc.Text, out idLopHoc);
+            string tenLopHoc = txtTenLopHoc.Text;
+            string tenKhoi = txtTenKhoi.Text;
+            string namHoc = txtNamHoc.Text;
+            int idGiaoVienChuNhiem;
+            Int32.TryParse(cboIdGiaoVien.Text, out idGiaoVienChuNhiem);
+
+            try
+            {
+                if (idLopHoc == -1 || tenLopHoc == "" || tenKhoi == "" || namHoc == "")
+                {
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+                    return;
+                }
+                LopHocDAO.Instance.Update(idLopHoc, tenLopHoc, tenKhoi, idGiaoVienChuNhiem, namHoc);
+                MessageBox.Show("Sửa thành công");
+                LoadListLopHoc();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Có lỗi xảy ra" + err.ToString());
+                LoadListLopHoc();
+            }
+        }
 
     }
 }
