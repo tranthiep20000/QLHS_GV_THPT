@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\BangDiemDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DTO\BangDiemDTO.cs" />
     <Compile Include="DTO\GiaoVienDTO.cs" />
