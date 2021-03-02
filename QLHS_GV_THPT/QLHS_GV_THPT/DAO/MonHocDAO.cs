@@ -29,7 +29,18 @@ namespace QLHS_GV_THPT.DAO
             }
             return list;
         }
-
+        
+        public bool CheckInsert(string tenMonHoc, int soTietHoc, string namHoc, int kiHoc, int idGiaoVien)
+        {
+            List<MonHocDTO> list = new List<MonHocDTO>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("SP_MonHoc_CheckInsert @tenMonHoc , @soTietHoc , @namHoc , @kiHoc , @idGiaoVien", new object[] { tenMonHoc, soTietHoc, namHoc, kiHoc, idGiaoVien });
+            foreach (DataRow item in data.Rows)
+            {
+                MonHocDTO entry = new MonHocDTO(item);
+                list.Add(entry);
+            }
+            return list.Count == 0;
+        }
         public bool Insert( string tenMonHoc, int soTietHoc, string namHoc, int kiHoc, int idGiaoVien )
         {
             int result = DataProvider.Instance.ExecuteNonQuery("SP_MonHoc_Insert @tenMonHoc , @soTietHoc , @namHoc , @kiHoc , @idGiaoVien", new object[] { tenMonHoc, soTietHoc, namHoc, kiHoc, idGiaoVien });

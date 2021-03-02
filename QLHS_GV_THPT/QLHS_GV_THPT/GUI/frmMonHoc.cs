@@ -47,8 +47,8 @@ namespace QLHS_GV_THPT.GUI
 
         private void LoadComboboxGiaoVien()
         {
-            cbbGV.DataSource = MonHocDAO.Instance.GetAll();//GiaoVienDAO
-            cbbGV.DisplayMember = "IdGiaoVien";
+            cbbGV.DataSource = GiaoVienDAO.Instance.GetAll();
+            cbbGV.DisplayMember = "idGiaoVien";
         }
 
         private void EditDataGridViewHeader()
@@ -84,9 +84,18 @@ namespace QLHS_GV_THPT.GUI
                     MessageBox.Show("Vui lòng điền đầy đủ thông tin");
                     return;
                 }
-                MonHocDAO.Instance.Insert(tenMonHoc, soTietHoc, namHoc, kiHoc, idGiaoVien);
-                MessageBox.Show("Thêm thành công");
-                LoadListMonHoc();
+                else
+                if (MonHocDAO.Instance.CheckInsert(tenMonHoc, soTietHoc, namHoc, kiHoc, idGiaoVien))
+                {
+                    MonHocDAO.Instance.Insert(tenMonHoc, soTietHoc, namHoc, kiHoc, idGiaoVien);
+                    MessageBox.Show("Thêm thành công");
+                    LoadListMonHoc();
+                }
+                else
+                {
+                    MessageBox.Show("Thông tin môn học này đã tồn tại!");
+                    return;
+                }
             }
             catch (Exception err)
             {
@@ -117,7 +126,11 @@ namespace QLHS_GV_THPT.GUI
                     MessageBox.Show("Vui lòng điền đầy đủ thông tin");
                     return;
                 }
-                if (MessageBox.Show("Bạn có thật sự muốn sửa môn học này!", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                if (!MonHocDAO.Instance.CheckInsert(tenMonHoc, soTietHoc, namHoc, kiHoc, idGiaoVien))
+                {
+                    MessageBox.Show("Vui lòng thay đổi thông tin trước khi sửa!");
+                }
+                else if (MessageBox.Show("Bạn có thật sự muốn sửa môn học này!", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
                     MonHocDAO.Instance.Update(idMonHoc, tenMonHoc, soTietHoc, namHoc, kiHoc, idGiaoVien);
                     MessageBox.Show("Cập nhật thành công");

@@ -269,6 +269,23 @@ BEGIN
 END
 GO
 
+CREATE PROCEDURE SP_MonHoc_CheckInsert
+  @tenMonHoc NVARCHAR(50),
+  @soTietHoc INT,
+  @namHoc NVARCHAR(10),
+  @kiHoc INT,
+  @idGiaoVien int
+AS
+BEGIN
+  SELECT *
+  FROM MonHoc
+  WHERE tenMonHoc = @tenMonHoc
+    and soTietHoc = @soTietHoc
+    and namHoc = @namHoc
+    and kiHoc = @kiHoc
+    and idGiaoVien = @idGiaoVien
+END
+GO
 -----------------------Bang Diem------------------------
 CREATE PROCEDURE SP_BangDiem_GetAll
 AS
