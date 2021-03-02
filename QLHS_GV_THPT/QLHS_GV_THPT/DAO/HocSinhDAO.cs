@@ -34,5 +34,29 @@ namespace QLHS_GV_THPT.GUI
             int result = DataProvider.Instance.ExecuteNonQuery("SP_HocSinh_Insert @tenHocSinh , @gioiTinh , @ngaySinh , @idLopHoc", new object[] { tenHocSinh, gioiTinh, ngaySinh, idLopHoc });
             return result > 0;
         }
+
+        public bool Update(int idHocSinh, string tenHocSinh, string gioiTinh, DateTime ngaySinh, int idLopHoc)
+        {
+            int result = DataProvider.Instance.ExecuteNonQuery("SP_HocSinh_Update @idHocSinh , @tenHocSinh , @gioiTinh , @ngaySinh , @idLopHoc", new object[] { idHocSinh, tenHocSinh, gioiTinh, ngaySinh, idLopHoc });
+
+            return result > 0;
+        }
+        public bool Delete(int idHocSinh)
+        {
+            int result = DataProvider.Instance.ExecuteNonQuery("SP_HocSinh_Delete @idHocSinh", new object[] { idHocSinh });
+
+            return result > 0;
+        }
+        public List<HocSinhDTO> Search(string searchValue)
+        {
+            List<HocSinhDTO> list = new List<HocSinhDTO>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("SP_HocSinh_Search @searchValue", new object[] { searchValue });
+            foreach (DataRow item in data.Rows)
+            {
+                HocSinhDTO entry = new HocSinhDTO(item);
+                list.Add(entry);
+            }
+            return list;
+        }
     }
 }
