@@ -172,6 +172,7 @@
             this.btnLamTrong.TabIndex = 5;
             this.btnLamTrong.Text = "Làm trống";
             this.btnLamTrong.UseVisualStyleBackColor = true;
+            this.btnLamTrong.Click += new System.EventHandler(this.btnLamTrong_Click);
             // 
             // dtpNgaySinh
             // 

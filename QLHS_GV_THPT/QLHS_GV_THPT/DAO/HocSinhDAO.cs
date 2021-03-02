@@ -58,5 +58,16 @@ namespace QLHS_GV_THPT.GUI
             }
             return list;
         }
+        public List<LopHocDTO> GetListLopHoc()
+        {
+            List<LopHocDTO> list = new List<LopHocDTO>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("SP_LopHoc_GetAll");
+            foreach (DataRow item in data.Rows)
+            {
+                LopHocDTO entry = new LopHocDTO(item);
+                list.Add(entry);
+            }
+            return list;
+        }
     }
 }
