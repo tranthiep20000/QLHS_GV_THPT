@@ -21,7 +21,7 @@ namespace QLHS_GV_THPT.DAO
 
         private DataProvider() { }
 
-        string connectionSTR = "Data Source=.\\SQLEXPRESS;Initial Catalog=TT_QLHS;Integrated Security=True";
+        string connectionSTR = "Data Source=DESKTOP-0L1VLRS\\SQLEXPRESS01;Initial Catalog=TT_QLHS;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
