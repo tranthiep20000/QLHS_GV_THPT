@@ -49,6 +49,7 @@
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\GiaoVienDAO.cs" />
     <Compile Include="DAO\MonHocDAO.cs" />
+    <Compile Include="DAO\LopHocDAO.cs" />
     <Compile Include="DTO\BangDiemDTO.cs" />
     <Compile Include="DTO\GiaoVienDTO.cs" />
     <Compile Include="DTO\HocSinhDTO.cs" />
@@ -98,6 +99,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\frmLopHoc.resx">
+      <DependentUpon>frmLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
