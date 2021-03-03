@@ -14,6 +14,7 @@ namespace QLHS_GV_THPT.GUI
     public partial class frmGiaoVien : Form
     {
         BindingSource giaoVienList = new BindingSource();
+
         public frmGiaoVien()
         {
             InitializeComponent();
@@ -59,20 +60,22 @@ namespace QLHS_GV_THPT.GUI
             txtTimKiem.Text = "";
         }
 
-        
 
-        private void btntimkiem_Click(object sender, EventArgs e)
+        private void txtSoDienThoai_KeyPress(object sender, KeyPressEventArgs e)
         {
-            string str = txtTimKiem.Text.Trim();
-            if (str == "")
+            char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
             {
-                MessageBox.Show("Chưa nhập thông tin tìm kiếm");
-                return;
+                e.Handled = true;
             }
-            giaoVienList.DataSource = GiaoVienDAO.Instance.Search(str);
         }
 
-        private void btnthem_Click(object sender, EventArgs e)
+        private void btnLamTrong_Click(object sender, EventArgs e)
+        {
+            MakeNull();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
         {
             string tenGiaoVien = txtTenGiaoVien.Text.Trim();
             string gioiTinh = rdbNam.Checked ? "Nam" : "Nữ";
@@ -98,7 +101,24 @@ namespace QLHS_GV_THPT.GUI
             }
         }
 
-        private void btnsua_Click(object sender, EventArgs e)
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            int idGiaoVien;
+            Int32.TryParse(txtIdGiaoVien.Text.Trim(), out idGiaoVien);
+            try
+            {
+                GiaoVienDAO.Instance.Delete(idGiaoVien);
+                MessageBox.Show("Xóa thành công");
+                LoadListGiaoVien();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Có lỗi xảy ra" + err.ToString());
+                LoadListGiaoVien();
+            }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
         {
             int idGiaoVien = -1;
             Int32.TryParse(txtIdGiaoVien.Text.Trim(), out idGiaoVien);
@@ -127,41 +147,20 @@ namespace QLHS_GV_THPT.GUI
             }
         }
 
-        private void btnxoa_Click(object sender, EventArgs e)
-        {
-            int idGiaoVien;
-            Int32.TryParse(txtIdGiaoVien.Text.Trim(), out idGiaoVien);
-            try
-            {
-                GiaoVienDAO.Instance.Delete(idGiaoVien);
-                MessageBox.Show("Xóa thành công");
-                LoadListGiaoVien();
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show("Có lỗi xảy ra" + err.ToString());
-                LoadListGiaoVien();
-            }
-
-        }
-
-        private void btnrefresh_Click(object sender, EventArgs e)
+        private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadListGiaoVien();
         }
 
-        private void txtSoDienThoai_KeyPress(object sender, KeyPressEventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-            char ch = e.KeyChar;
-            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            string str = txtTimKiem.Text.Trim();
+            if (str == "")
             {
-                e.Handled = true;
+                MessageBox.Show("Chưa nhập thông tin tìm kiếm");
+                return;
             }
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            MakeNull();
+            giaoVienList.DataSource = GiaoVienDAO.Instance.Search(str);
         }
     }
 }
