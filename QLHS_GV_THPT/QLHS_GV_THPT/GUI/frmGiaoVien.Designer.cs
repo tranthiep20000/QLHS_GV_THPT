@@ -83,6 +83,7 @@
             this.button6.TabIndex = 11;
             this.button6.Text = "làm trống";
             this.button6.UseVisualStyleBackColor = true;
+      
             // 
             // rdbNam
             // 
@@ -119,6 +120,7 @@
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.Size = new System.Drawing.Size(148, 20);
             this.txtSoDienThoai.TabIndex = 7;
+            this.txtSoDienThoai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoDienThoai_KeyPress);
             // 
             // txtTenGiaoVien
             // 
@@ -187,7 +189,7 @@
             this.dgvGiaoVien.Name = "dgvGiaoVien";
             this.dgvGiaoVien.Size = new System.Drawing.Size(804, 323);
             this.dgvGiaoVien.TabIndex = 1;
-            this.dgvGiaoVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+
             // 
             // groupBox2
             // 
@@ -211,6 +213,7 @@
             this.btntimkiem.TabIndex = 5;
             this.btntimkiem.Text = "tìm kiếm";
             this.btntimkiem.UseVisualStyleBackColor = true;
+            this.btntimkiem.Click += new System.EventHandler(this.btntimkiem_Click);
             // 
             // btnxoa
             // 
@@ -220,6 +223,7 @@
             this.btnxoa.TabIndex = 4;
             this.btnxoa.Text = "xóa";
             this.btnxoa.UseVisualStyleBackColor = true;
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
             // 
             // btnrefresh
             // 
@@ -229,6 +233,7 @@
             this.btnrefresh.TabIndex = 3;
             this.btnrefresh.Text = "refresh";
             this.btnrefresh.UseVisualStyleBackColor = true;
+            this.btnrefresh.Click += new System.EventHandler(this.btnrefresh_Click);
             // 
             // btnsua
             // 
@@ -238,6 +243,7 @@
             this.btnsua.TabIndex = 2;
             this.btnsua.Text = "sửa";
             this.btnsua.UseVisualStyleBackColor = true;
+            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
             // 
             // btnthem
             // 
@@ -247,6 +253,7 @@
             this.btnthem.TabIndex = 1;
             this.btnthem.Text = "thêm";
             this.btnthem.UseVisualStyleBackColor = true;
+            this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
             // 
             // txtTimKiem
             // 
@@ -266,7 +273,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmGiaoVien";
             this.Text = "Giáo Viên";
-            this.Load += new System.EventHandler(this.frmGiaoVien_Load);
+            
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGiaoVien)).EndInit();
