@@ -88,8 +88,8 @@
     <Compile Include="DAO\HocSinhDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\frmHocSinh.resx">
-      <DependentUpon>frmHocSinh.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmGiaoVien.resx">
+      <DependentUpon>frmGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
