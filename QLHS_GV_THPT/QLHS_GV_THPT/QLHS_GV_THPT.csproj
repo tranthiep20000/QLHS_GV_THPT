@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\BangDiemDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\GiaoVienDAO.cs" />
     <Compile Include="DAO\MonHocDAO.cs" />
@@ -55,11 +56,15 @@
     <Compile Include="DTO\HocSinhDTO.cs" />
     <Compile Include="DTO\LopHocDTO.cs" />
     <Compile Include="DTO\MonHocDTO.cs" />
-    <Compile Include="GUI\frmDiem.cs" />
+    <Compile Include="GUI\frmDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GUI\frmDiem.Designer.cs">
       <DependentUpon>frmDiem.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmGiaoVien.cs" />
+    <Compile Include="GUI\frmGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GUI\frmGiaoVien.Designer.cs">
       <DependentUpon>frmGiaoVien.cs</DependentUpon>
     </Compile>
@@ -69,19 +74,27 @@
     <Compile Include="GUI\frmHocSinh.Designer.cs">
       <DependentUpon>frmHocSinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmHuongDan.cs" />
+    <Compile Include="GUI\frmHuongDan.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GUI\frmHuongDan.Designer.cs">
       <DependentUpon>frmHuongDan.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmLopHoc.cs" />
+    <Compile Include="GUI\frmLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GUI\frmLopHoc.Designer.cs">
       <DependentUpon>frmLopHoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmMain.cs" />
+    <Compile Include="GUI\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GUI\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmMonHoc.cs" />
+    <Compile Include="GUI\frmMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GUI\frmMonHoc.Designer.cs">
       <DependentUpon>frmMonHoc.cs</DependentUpon>
     </Compile>
