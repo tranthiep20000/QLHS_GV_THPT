@@ -1,6 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using QuanLyHocSinhTHPT.DAO;
+using QLHS_GV_THPT.DAO;
 
 namespace QLHS_GV_THPT.GUI
 {
@@ -8,9 +15,11 @@ namespace QLHS_GV_THPT.GUI
     {
         BindingSource diemSoList = new BindingSource();
         BindingSource monHocList = new BindingSource();
+
         public frmDiem()
         {
             InitializeComponent();
+            LoadFirstTime();
         }
         private void LoadFirstTime()
         {
@@ -25,11 +34,6 @@ namespace QLHS_GV_THPT.GUI
             diemSoList.DataSource = BangDiemDAO.Instance.GetByIdMonHoc(idMonHoc);
 
         }
-
-        /// <summary>
-        /// Load dữ liệu combobox
-        /// created by : Nguyễn Văn Hiến
-        /// </summary>
         private void LoadComboboxIdHocSinh()
         {
             cboHocSinh.DataSource = HocSinhDAO.Instance.GetAll();
@@ -37,27 +41,15 @@ namespace QLHS_GV_THPT.GUI
             cboHocSinh.ValueMember = "IdHocSinh";
         }
 
-        /// <summary>
-        /// Load dữ liệu danh sách môn học 
-        /// created by : Nguyễn Văn Hiến
-        /// </summary>
         private void LoadListMonHoc()
         {
             monHocList.DataSource = MonHocDAO.Instance.GetAll();
             diemSoList.DataSource = BangDiemDAO.Instance.GetAll();
         }
-        /// <summary>
-        /// Load dữ liệu điểm số
-        /// created by : Nguyễn Văn Hiến
-        /// </summary>
-        /// <param name="idMonHoc"> mã môn học</param>
         private void LoadListDiemSo(int idMonHoc)
         {
             diemSoList.DataSource = BangDiemDAO.Instance.GetByIdMonHoc(idMonHoc);
         }
-
-        
-
         private void EditDataGridView()
         {
             dgvMonHoc.Columns["IdMonHoc"].HeaderText = "Id Môn học";
@@ -101,10 +93,6 @@ namespace QLHS_GV_THPT.GUI
             txtDiem45phut.Text = "";
             cboHocSinh.DataSource = HocSinhDAO.Instance.GetAll();
         }
-        private void btnLamTrong_Click(object sender, EventArgs e)
-        {
-            MakeNull();
-        }
         private void LoadList()
         {
             int idMonHoc;
@@ -112,59 +100,12 @@ namespace QLHS_GV_THPT.GUI
             diemSoList.DataSource = BangDiemDAO.Instance.GetAll();
             monHocList.DataSource = MonHocDAO.Instance.GetAll();
         }
-        private void btnTimKiem_Click(object sender, EventArgs e)
-        {
-            string str = txtTimKiem.Text.Trim();
-            if (str == "")
-            {
-                MessageBox.Show("Chưa nhập thông tin tìm kiếm");
-                return;
-            }
-            monHocList.DataSource = MonHocDAO.Instance.Search(str);
-            diemSoList.DataSource = BangDiemDAO.Instance.Search(str);
 
+        private void btnLamTrong_Click(object sender, EventArgs e)
+        {
+            MakeNull();
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            LoadListMonHoc();
-        }
-
-        /// <summary>
-        /// Khi click vào button xóa
-        /// created by : Nguyễn Văn Hiến
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            int idDiem;
-            Int32.TryParse(txtIdDiem.Text.Trim(), out idDiem);
-            
-            try
-            {
-                BangDiemDAO.Instance.Delete(idDiem);
-                MessageBox.Show("Xóa thành công");
-                //Khi xóa xong load lại dữ liệu 2 danh sách môn học và điểm số
-                monHocList.DataSource = MonHocDAO.Instance.GetAll();
-                diemSoList.DataSource = BangDiemDAO.Instance.GetAll();
-            }
-            catch (Exception err)
-            {
-                // có lỗi 
-                MessageBox.Show("Có lỗi xảy ra" + err.ToString());
-                //load lại dữ liệu 2 danh sách môn học và điểm số
-                monHocList.DataSource = MonHocDAO.Instance.GetAll();
-                diemSoList.DataSource = BangDiemDAO.Instance.GetAll();
-            }
-        }
-
-        /// <summary>
-        /// Khi click vào button thêm
-        /// created by : Nguyễn Văn Hiến
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void btnThem_Click(object sender, EventArgs e)
         {
             float diem15 = -1;
@@ -199,11 +140,25 @@ namespace QLHS_GV_THPT.GUI
             }
         }
 
-        /// <summary>
-        /// Khi click vào button sửa
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            int idDiem;
+            Int32.TryParse(txtIdDiem.Text.Trim(), out idDiem);
+            try
+            {
+                BangDiemDAO.Instance.Delete(idDiem);
+                MessageBox.Show("Xóa thành công");
+                monHocList.DataSource = MonHocDAO.Instance.GetAll();
+                diemSoList.DataSource = BangDiemDAO.Instance.GetAll();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Có lỗi xảy ra" + err.ToString());
+                monHocList.DataSource = MonHocDAO.Instance.GetAll();
+                diemSoList.DataSource = BangDiemDAO.Instance.GetAll();
+            }
+        }
+
         private void btnSua_Click(object sender, EventArgs e)
         {
             int idDiem = -1;
@@ -240,7 +195,22 @@ namespace QLHS_GV_THPT.GUI
                 LoadList();
             }
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadListMonHoc();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string str = txtTimKiem.Text.Trim();
+            if (str == "")
+            {
+                MessageBox.Show("Chưa nhập thông tin tìm kiếm");
+                return;
+            }
+            monHocList.DataSource = MonHocDAO.Instance.Search(str);
+            diemSoList.DataSource = BangDiemDAO.Instance.Search(str);
+        }
     }
 }
-
-

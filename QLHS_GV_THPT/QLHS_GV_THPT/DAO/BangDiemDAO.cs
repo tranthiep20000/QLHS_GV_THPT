@@ -4,7 +4,7 @@ using QLHS_GV_THPT.DAO;
 using QLHS_GV_THPT.DTO;
 
 
-namespace QuanLyHocSinhTHPT.DAO
+namespace QLHS_GV_THPT.DAO
 {
     class BangDiemDAO
     {
