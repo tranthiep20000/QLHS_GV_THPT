@@ -68,7 +68,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(34, 13);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(462, 174);
             this.groupBox1.TabIndex = 0;
@@ -83,7 +83,7 @@
             this.button6.TabIndex = 11;
             this.button6.Text = "làm trống";
             this.button6.UseVisualStyleBackColor = true;
-      
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // rdbNam
             // 
@@ -185,11 +185,10 @@
             // 
             this.dgvGiaoVien.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvGiaoVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGiaoVien.Location = new System.Drawing.Point(12, 192);
+            this.dgvGiaoVien.Location = new System.Drawing.Point(34, 192);
             this.dgvGiaoVien.Name = "dgvGiaoVien";
             this.dgvGiaoVien.Size = new System.Drawing.Size(804, 323);
             this.dgvGiaoVien.TabIndex = 1;
-
             // 
             // groupBox2
             // 
@@ -199,7 +198,7 @@
             this.groupBox2.Controls.Add(this.btnsua);
             this.groupBox2.Controls.Add(this.btnthem);
             this.groupBox2.Controls.Add(this.txtTimKiem);
-            this.groupBox2.Location = new System.Drawing.Point(480, 13);
+            this.groupBox2.Location = new System.Drawing.Point(502, 13);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(336, 173);
             this.groupBox2.TabIndex = 2;
@@ -273,7 +272,6 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmGiaoVien";
             this.Text = "Giáo Viên";
-            
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGiaoVien)).EndInit();

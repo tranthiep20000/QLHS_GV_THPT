@@ -59,20 +59,7 @@ namespace QLHS_GV_THPT.GUI
             txtTimKiem.Text = "";
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void frmGiaoVien_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            MakeNull();
-        }
+        
 
         private void btntimkiem_Click(object sender, EventArgs e)
         {
@@ -170,6 +157,11 @@ namespace QLHS_GV_THPT.GUI
             {
                 e.Handled = true;
             }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            MakeNull();
         }
     }
 }
