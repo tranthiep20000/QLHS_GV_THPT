@@ -73,9 +73,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(19, 25);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(541, 197);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
@@ -95,7 +95,7 @@
             // 
             this.cboHocSinh.FormattingEnabled = true;
             this.cboHocSinh.Location = new System.Drawing.Point(412, 65);
-            this.cboHocSinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboHocSinh.Margin = new System.Windows.Forms.Padding(2);
             this.cboHocSinh.Name = "cboHocSinh";
             this.cboHocSinh.Size = new System.Drawing.Size(92, 21);
             this.cboHocSinh.TabIndex = 16;
@@ -123,7 +123,7 @@
             // txtDiemHocKi
             // 
             this.txtDiemHocKi.Location = new System.Drawing.Point(95, 148);
-            this.txtDiemHocKi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDiemHocKi.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiemHocKi.Name = "txtDiemHocKi";
             this.txtDiemHocKi.Size = new System.Drawing.Size(151, 20);
             this.txtDiemHocKi.TabIndex = 12;
@@ -141,7 +141,7 @@
             // txtDiem45phut
             // 
             this.txtDiem45phut.Location = new System.Drawing.Point(95, 110);
-            this.txtDiem45phut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDiem45phut.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiem45phut.Name = "txtDiem45phut";
             this.txtDiem45phut.Size = new System.Drawing.Size(151, 20);
             this.txtDiem45phut.TabIndex = 10;
@@ -159,7 +159,7 @@
             // btnLamTrong
             // 
             this.btnLamTrong.Location = new System.Drawing.Point(428, 133);
-            this.btnLamTrong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLamTrong.Margin = new System.Windows.Forms.Padding(2);
             this.btnLamTrong.Name = "btnLamTrong";
             this.btnLamTrong.Size = new System.Drawing.Size(75, 32);
             this.btnLamTrong.TabIndex = 5;
@@ -170,7 +170,7 @@
             // txtDiem15phut
             // 
             this.txtDiem15phut.Location = new System.Drawing.Point(95, 71);
-            this.txtDiem15phut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDiem15phut.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiem15phut.Name = "txtDiem15phut";
             this.txtDiem15phut.Size = new System.Drawing.Size(151, 20);
             this.txtDiem15phut.TabIndex = 8;
@@ -208,7 +208,7 @@
             // btnThem
             // 
             this.btnThem.Location = new System.Drawing.Point(25, 17);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 32);
             this.btnThem.TabIndex = 0;
@@ -222,7 +222,7 @@
             this.dgvMonHoc.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvMonHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMonHoc.Location = new System.Drawing.Point(19, 253);
-            this.dgvMonHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvMonHoc.Margin = new System.Windows.Forms.Padding(2);
             this.dgvMonHoc.Name = "dgvMonHoc";
             this.dgvMonHoc.RowTemplate.Height = 24;
             this.dgvMonHoc.Size = new System.Drawing.Size(377, 384);
@@ -237,9 +237,9 @@
             this.groupBox2.Controls.Add(this.btnXoa);
             this.groupBox2.Controls.Add(this.btnThem);
             this.groupBox2.Location = new System.Drawing.Point(584, 25);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(268, 197);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
@@ -247,7 +247,7 @@
             // btnRefresh
             // 
             this.btnRefresh.Location = new System.Drawing.Point(120, 71);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 32);
             this.btnRefresh.TabIndex = 3;
@@ -258,7 +258,7 @@
             // txtTimKiem
             // 
             this.txtTimKiem.Location = new System.Drawing.Point(25, 139);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(127, 20);
             this.txtTimKiem.TabIndex = 2;
@@ -266,7 +266,7 @@
             // btnTimKiem
             // 
             this.btnTimKiem.Location = new System.Drawing.Point(170, 132);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(75, 32);
             this.btnTimKiem.TabIndex = 4;
@@ -277,7 +277,7 @@
             // btnSua
             // 
             this.btnSua.Location = new System.Drawing.Point(25, 71);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 32);
             this.btnSua.TabIndex = 2;
@@ -288,7 +288,7 @@
             // btnXoa
             // 
             this.btnXoa.Location = new System.Drawing.Point(120, 17);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 32);
             this.btnXoa.TabIndex = 1;
@@ -302,7 +302,7 @@
             this.dgvDiemSo.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvDiemSo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDiemSo.Location = new System.Drawing.Point(418, 253);
-            this.dgvDiemSo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvDiemSo.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDiemSo.Name = "dgvDiemSo";
             this.dgvDiemSo.RowTemplate.Height = 24;
             this.dgvDiemSo.Size = new System.Drawing.Size(434, 384);
@@ -312,13 +312,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(886, 609);
             this.Controls.Add(this.dgvDiemSo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvMonHoc);
             this.Controls.Add(this.groupBox2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDiem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Điểm";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
