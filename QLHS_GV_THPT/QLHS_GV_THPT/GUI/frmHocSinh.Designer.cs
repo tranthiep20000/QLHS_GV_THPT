@@ -299,7 +299,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmHocSinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmHocSinh";
+            this.Text = "Học Sinh";
             ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

@@ -121,7 +121,7 @@ namespace QLHS_GV_THPT.GUI
 
             try
             {
-                if (idMonHoc == -1 || tenMonHoc == "" || namHoc == "" || soTietHoc == -1 || kiHoc == -1 || idGiaoVien == null)
+                if (idMonHoc == -1 || tenMonHoc == "" || namHoc == "" || soTietHoc == -1 || kiHoc == -1 || idGiaoVien == -1)
                 {
                     MessageBox.Show("Vui lòng điền đầy đủ thông tin");
                     return;

@@ -119,5 +119,15 @@ namespace QLHS_GV_THPT.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap anh_main {
+            get {
+                object obj = ResourceManager.GetObject("anh_main", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

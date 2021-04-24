@@ -158,6 +158,7 @@
     <Content Include="Image\anh_4.png" />
     <Content Include="Image\anh_5.png" />
     <Content Include="Image\anh_6.png" />
+    <Content Include="Image\anh_main.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

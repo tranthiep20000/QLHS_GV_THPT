@@ -284,7 +284,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmLopHoc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmLopHoc";
+            this.Text = "Lớp Học";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLopHoc)).EndInit();

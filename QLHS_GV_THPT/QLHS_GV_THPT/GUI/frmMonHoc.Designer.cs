@@ -60,7 +60,7 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.dgvMonHoc);
             this.panel1.Location = new System.Drawing.Point(9, 8);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(889, 531);
             this.panel1.TabIndex = 0;
@@ -75,9 +75,9 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.groupBox2.Location = new System.Drawing.Point(577, 2);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(265, 201);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
@@ -86,7 +86,7 @@
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(177, 125);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 38);
             this.btnSearch.TabIndex = 4;
@@ -98,7 +98,7 @@
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiem.Location = new System.Drawing.Point(13, 135);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(153, 20);
             this.txtTimKiem.TabIndex = 3;
@@ -106,7 +106,7 @@
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(188, 36);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(63, 38);
             this.btnDelete.TabIndex = 2;
@@ -117,7 +117,7 @@
             // btnEdit
             // 
             this.btnEdit.Location = new System.Drawing.Point(101, 36);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(63, 38);
             this.btnEdit.TabIndex = 1;
@@ -128,7 +128,7 @@
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(13, 36);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(63, 38);
             this.btnAdd.TabIndex = 0;
@@ -150,9 +150,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(44, 2);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(507, 201);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
@@ -163,7 +163,7 @@
             this.cbbKiHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbKiHoc.FormattingEnabled = true;
             this.cbbKiHoc.Location = new System.Drawing.Point(335, 79);
-            this.cbbKiHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbKiHoc.Margin = new System.Windows.Forms.Padding(2);
             this.cbbKiHoc.Name = "cbbKiHoc";
             this.cbbKiHoc.Size = new System.Drawing.Size(151, 21);
             this.cbbKiHoc.TabIndex = 9;
@@ -173,7 +173,7 @@
             this.cbbGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbGV.FormattingEnabled = true;
             this.cbbGV.Location = new System.Drawing.Point(99, 79);
-            this.cbbGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbGV.Margin = new System.Windows.Forms.Padding(2);
             this.cbbGV.Name = "cbbGV";
             this.cbbGV.Size = new System.Drawing.Size(151, 21);
             this.cbbGV.TabIndex = 8;
@@ -182,7 +182,7 @@
             // 
             this.txtSoTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoTiet.Location = new System.Drawing.Point(335, 135);
-            this.txtSoTiet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSoTiet.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoTiet.Name = "txtSoTiet";
             this.txtSoTiet.Size = new System.Drawing.Size(151, 20);
             this.txtSoTiet.TabIndex = 7;
@@ -191,7 +191,7 @@
             // 
             this.txtNamHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNamHoc.Location = new System.Drawing.Point(99, 135);
-            this.txtNamHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNamHoc.Margin = new System.Windows.Forms.Padding(2);
             this.txtNamHoc.Name = "txtNamHoc";
             this.txtNamHoc.Size = new System.Drawing.Size(151, 20);
             this.txtNamHoc.TabIndex = 6;
@@ -200,7 +200,7 @@
             // 
             this.txtTenMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenMH.Location = new System.Drawing.Point(99, 25);
-            this.txtTenMH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenMH.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenMH.Name = "txtTenMH";
             this.txtTenMH.Size = new System.Drawing.Size(151, 20);
             this.txtTenMH.TabIndex = 5;
@@ -265,8 +265,8 @@
             this.dgvMonHoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMonHoc.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvMonHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMonHoc.Location = new System.Drawing.Point(44, 219);
-            this.dgvMonHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvMonHoc.Location = new System.Drawing.Point(31, 220);
+            this.dgvMonHoc.Margin = new System.Windows.Forms.Padding(2);
             this.dgvMonHoc.Name = "dgvMonHoc";
             this.dgvMonHoc.RowHeadersWidth = 62;
             this.dgvMonHoc.RowTemplate.Height = 28;
@@ -282,10 +282,10 @@
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(905, 487);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMonHoc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmMonHoc";
+            this.Text = "Môn Học";
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
