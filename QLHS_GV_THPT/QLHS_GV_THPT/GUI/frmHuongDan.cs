@@ -31,6 +31,8 @@ namespace QLHS_GV_THPT.GUI
                 pictureBox4.Visible = false;
                 pictureBox5.Visible = false;
                 pictureBox6.Visible = false;
+                pictureBox7.Visible = false;
+                pictureBox8.Visible = false;
 
             }
             else if (pictureBox3.Visible == true)
@@ -41,6 +43,8 @@ namespace QLHS_GV_THPT.GUI
                 pictureBox4.Visible = false;
                 pictureBox5.Visible = false;
                 pictureBox6.Visible = false;
+                pictureBox7.Visible = false;
+                pictureBox8.Visible = false;
 
             }
             else if (pictureBox4.Visible == true)
@@ -51,6 +55,8 @@ namespace QLHS_GV_THPT.GUI
                 pictureBox4.Visible = false;
                 pictureBox5.Visible = false;
                 pictureBox6.Visible = false;
+                pictureBox7.Visible = false;
+                pictureBox8.Visible = false;
 
             }
             else if (pictureBox5.Visible == true)
@@ -61,6 +67,8 @@ namespace QLHS_GV_THPT.GUI
                 pictureBox4.Visible = true;
                 pictureBox5.Visible = false;
                 pictureBox6.Visible = false;
+                pictureBox7.Visible = false;
+                pictureBox8.Visible = false;
             }
             else if (pictureBox6.Visible == true)
             {
@@ -70,9 +78,32 @@ namespace QLHS_GV_THPT.GUI
                 pictureBox4.Visible = false;
                 pictureBox5.Visible = true;
                 pictureBox6.Visible = false;
-
+                pictureBox7.Visible = false;
+                pictureBox8.Visible = false;
             }
-       
+            else if (pictureBox7.Visible == true)
+            {
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = false;
+                pictureBox3.Visible = false;
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = false;
+                pictureBox6.Visible = true;
+                pictureBox7.Visible = false;
+                pictureBox8.Visible = false;
+            }
+            else if (pictureBox8.Visible == true)
+            {
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = false;
+                pictureBox3.Visible = false;
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = false;
+                pictureBox6.Visible = false;
+                pictureBox7.Visible = true;
+                pictureBox8.Visible = false;
+            }
+
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -85,6 +116,8 @@ namespace QLHS_GV_THPT.GUI
                 pictureBox4.Visible = false;
                 pictureBox5.Visible = false;
                 pictureBox6.Visible = false;
+                pictureBox7.Visible = false;
+                pictureBox8.Visible = false;
             }
             else if (pictureBox2.Visible == true)
             {
@@ -94,6 +127,8 @@ namespace QLHS_GV_THPT.GUI
                 pictureBox4.Visible = false;
                 pictureBox5.Visible = false;
                 pictureBox6.Visible = false;
+                pictureBox7.Visible = false;
+                pictureBox8.Visible = false;
 
             }
             else if (pictureBox3.Visible == true)
@@ -104,6 +139,8 @@ namespace QLHS_GV_THPT.GUI
                 pictureBox4.Visible = true;
                 pictureBox5.Visible = false;
                 pictureBox6.Visible = false;
+                pictureBox7.Visible = false;
+                pictureBox8.Visible = false;
 
             }
             else if (pictureBox4.Visible == true)
@@ -114,6 +151,8 @@ namespace QLHS_GV_THPT.GUI
                 pictureBox4.Visible = false;
                 pictureBox5.Visible = true;
                 pictureBox6.Visible = false;
+                pictureBox7.Visible = false;
+                pictureBox8.Visible = false;
 
             }
             else if (pictureBox5.Visible == true)
@@ -124,8 +163,32 @@ namespace QLHS_GV_THPT.GUI
                 pictureBox4.Visible = false;
                 pictureBox5.Visible = false;
                 pictureBox6.Visible = true;
+                pictureBox7.Visible = false;
+                pictureBox8.Visible = false;
             }
             else if (pictureBox6.Visible == true)
+            {
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = false;
+                pictureBox3.Visible = false;
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = false;
+                pictureBox6.Visible = false;
+                pictureBox7.Visible = true;
+                pictureBox8.Visible = false;
+            }
+            else if (pictureBox7.Visible == true)
+            {
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = false;
+                pictureBox3.Visible = false;
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = false;
+                pictureBox6.Visible = false;
+                pictureBox7.Visible = false;
+                pictureBox8.Visible = true;
+            }
+            else if (pictureBox8.Visible == true)
             {
                 MessageBox.Show("Đã hết! quay lại nhấn Previous");
 

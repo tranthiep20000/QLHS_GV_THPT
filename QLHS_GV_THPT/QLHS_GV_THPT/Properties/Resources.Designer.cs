@@ -123,6 +123,26 @@ namespace QLHS_GV_THPT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Anh_DK {
+            get {
+                object obj = ResourceManager.GetObject("Anh_DK", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Anh_DN {
+            get {
+                object obj = ResourceManager.GetObject("Anh_DN", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap anh_main {
             get {
                 object obj = ResourceManager.GetObject("anh_main", resourceCulture);

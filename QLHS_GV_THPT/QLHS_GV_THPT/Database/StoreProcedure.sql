@@ -359,3 +359,24 @@ BEGIN
     OR idHocSinh LIKE N'%' + @searchValue + '%'
 END
 GO
+-----------------------Account------------------------
+CREATE PROCEDURE TT_QLHS_Login
+@Email VARCHAR(50),
+@Password VARCHAR(50)
+AS
+BEGIN
+	SELECT * FROM Account WHERE Email = @Email AND Password = @Password
+END
+GO
+
+CREATE PROCEDURE SP_Account_Insert
+  @Email VARCHAR(50),
+  @GioiTinh NCHAR(10),
+  @Password VARCHAR(50)
+AS
+BEGIN
+  INSERT INTO Account
+    (Email, GioiTinh, Password)
+  VALUES(@Email, @GioiTinh, @Password)
+END
+GO

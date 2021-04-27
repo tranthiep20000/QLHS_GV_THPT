@@ -66,4 +66,11 @@ CREATE TABLE BangDiem
   FOREIGN KEY(idHocSinh) REFERENCES HocSinh(idHocSinh),
 )
 
+CREATE TABLE Account
+(
+	Email VARCHAR(50),
+	GioiTinh NCHAR(10),
+	Password VARCHAR(50),
+)
+
 
