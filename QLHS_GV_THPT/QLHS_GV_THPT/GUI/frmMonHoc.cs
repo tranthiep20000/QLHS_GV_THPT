@@ -181,5 +181,20 @@ namespace QLHS_GV_THPT.GUI
                 monHocList.DataSource = MonHocDAO.Instance.Search(search); 
             }
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadListMonHoc();
+        }
+
+        private void btnLamTrong_Click(object sender, EventArgs e)
+        {
+            txtTenMH.Text = "";
+            LoadComboboxGiaoVien();
+            txtNamHoc.Text = "";
+            LoadComboboxKiHoc();
+            txtSoTiet.Text = "";
+            txtTimKiem.Text = "";
+        }
     }
 }

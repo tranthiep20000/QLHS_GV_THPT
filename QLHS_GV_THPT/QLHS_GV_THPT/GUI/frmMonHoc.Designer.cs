@@ -47,6 +47,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvMonHoc = new System.Windows.Forms.DataGridView();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnLamTrong = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -67,6 +69,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnRefresh);
             this.groupBox2.Controls.Add(this.btnSearch);
             this.groupBox2.Controls.Add(this.txtTimKiem);
             this.groupBox2.Controls.Add(this.btnDelete);
@@ -138,6 +141,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnLamTrong);
             this.groupBox1.Controls.Add(this.cbbKiHoc);
             this.groupBox1.Controls.Add(this.cbbGV);
             this.groupBox1.Controls.Add(this.txtSoTiet);
@@ -162,7 +166,7 @@
             // 
             this.cbbKiHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbKiHoc.FormattingEnabled = true;
-            this.cbbKiHoc.Location = new System.Drawing.Point(335, 79);
+            this.cbbKiHoc.Location = new System.Drawing.Point(335, 24);
             this.cbbKiHoc.Margin = new System.Windows.Forms.Padding(2);
             this.cbbKiHoc.Name = "cbbKiHoc";
             this.cbbKiHoc.Size = new System.Drawing.Size(151, 21);
@@ -181,7 +185,7 @@
             // txtSoTiet
             // 
             this.txtSoTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoTiet.Location = new System.Drawing.Point(335, 135);
+            this.txtSoTiet.Location = new System.Drawing.Point(335, 80);
             this.txtSoTiet.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoTiet.Name = "txtSoTiet";
             this.txtSoTiet.Size = new System.Drawing.Size(151, 20);
@@ -209,7 +213,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(269, 85);
+            this.label5.Location = new System.Drawing.Point(269, 28);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
@@ -242,7 +246,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(269, 139);
+            this.label2.Location = new System.Drawing.Point(269, 87);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 13);
@@ -272,6 +276,28 @@
             this.dgvMonHoc.RowTemplate.Height = 28;
             this.dgvMonHoc.Size = new System.Drawing.Size(798, 274);
             this.dgvMonHoc.TabIndex = 3;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(101, 85);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(63, 32);
+            this.btnRefresh.TabIndex = 5;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnLamTrong
+            // 
+            this.btnLamTrong.Location = new System.Drawing.Point(411, 152);
+            this.btnLamTrong.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLamTrong.Name = "btnLamTrong";
+            this.btnLamTrong.Size = new System.Drawing.Size(75, 32);
+            this.btnLamTrong.TabIndex = 6;
+            this.btnLamTrong.Text = "Làm trống";
+            this.btnLamTrong.UseVisualStyleBackColor = true;
+            this.btnLamTrong.Click += new System.EventHandler(this.btnLamTrong_Click);
             // 
             // frmMonHoc
             // 
@@ -317,5 +343,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnLamTrong;
     }
 }

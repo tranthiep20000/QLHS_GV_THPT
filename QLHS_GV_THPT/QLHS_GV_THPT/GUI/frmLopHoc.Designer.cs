@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnLamTrong = new System.Windows.Forms.Button();
-            this.txtNamHoc = new System.Windows.Forms.TextBox();
             this.cboIdGiaoVien = new System.Windows.Forms.ComboBox();
             this.txtTenKhoi = new System.Windows.Forms.TextBox();
             this.txtTenLopHoc = new System.Windows.Forms.TextBox();
@@ -49,7 +47,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.txtNamHoc = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLopHoc)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -58,8 +56,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.groupBox1.Controls.Add(this.btnLamTrong);
             this.groupBox1.Controls.Add(this.txtNamHoc);
+            this.groupBox1.Controls.Add(this.btnLamTrong);
             this.groupBox1.Controls.Add(this.cboIdGiaoVien);
             this.groupBox1.Controls.Add(this.txtTenKhoi);
             this.groupBox1.Controls.Add(this.txtTenLopHoc);
@@ -88,14 +86,6 @@
             this.btnLamTrong.Text = "Làm trống";
             this.btnLamTrong.UseVisualStyleBackColor = true;
             this.btnLamTrong.Click += new System.EventHandler(this.btnLamTrong_Click);
-            // 
-            // txtNamHoc
-            // 
-            this.txtNamHoc.Location = new System.Drawing.Point(333, 88);
-            this.txtNamHoc.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNamHoc.Name = "txtNamHoc";
-            this.txtNamHoc.Size = new System.Drawing.Size(151, 20);
-            this.txtNamHoc.TabIndex = 14;
             // 
             // cboIdGiaoVien
             // 
@@ -273,6 +263,14 @@
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
+            // txtNamHoc
+            // 
+            this.txtNamHoc.Location = new System.Drawing.Point(333, 86);
+            this.txtNamHoc.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNamHoc.Name = "txtNamHoc";
+            this.txtNamHoc.Size = new System.Drawing.Size(151, 20);
+            this.txtNamHoc.TabIndex = 14;
+            // 
             // frmLopHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,7 +296,6 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnLamTrong;
-        private System.Windows.Forms.TextBox txtNamHoc;
         private System.Windows.Forms.ComboBox cboIdGiaoVien;
         private System.Windows.Forms.TextBox txtTenKhoi;
         private System.Windows.Forms.TextBox txtTenLopHoc;
@@ -316,6 +313,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox txtNamHoc;
     }
 }
