@@ -3,7 +3,11 @@ Các chức năng cần xây dựng
 
 Xây dựng CSDL:	Tạo cơ sở dữ liệu
 
+    -Thiệp
+
 Thiết kế giao diện:	Xây dựng giao diện cho toàn bộ chương trình
+
+    -Thiệp
 
 Module 1: Quản lý học sinh:	Thêm, sửa, xóa, tìm kiếm
 
