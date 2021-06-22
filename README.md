@@ -25,4 +25,8 @@ Module 4: Hướng dẫn sử dụng phần mềm, chi tiết đến từng ch�
 
 Module 5: Xây dựng tài liệu sử dụng phần mềm:	Hướng dẫn cài đặt, vận hành
 
+    - Thiệp
+
 Module 6: Chạy kiểm thử phần mềm.	
+
+    - Thiệp
